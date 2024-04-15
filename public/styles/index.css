@@ -1,0 +1,23 @@
+.priceDiscount {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.priceDiscount span {
+    line-height: .7rem;
+}
+
+.priceDiscount span:nth-child(1) {
+    font-size: x-small;
+}
+
+.priceDiscount span:nth-child(2) {
+    font-size: small;
+}
+
+#results {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
+}

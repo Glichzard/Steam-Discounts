@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount notifier</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="icon" href="/assets/favicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body lang="en" data-bs-theme="dark">
+    <div class="container-xl d-flex flex-column mb-3 gap-4 pt-3">
+        <ul class="nav nav-pills nav-fill sticky-top">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Search</a>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link active" aria-current="page" href="#">My list</button>
+            </li>
+        </ul>
+
+        <h1>My list</h1>
+
+        <div id="account">
+
+        </div>
+
+        <div id="results">
+            <div>
+
+                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                <span role="status">Loading...</span>
+            </div>
+        </div>
+    </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header d-flex align-items-center">
+                <i class="bi bi-exclamation-triangle"></i>
+                <strong class="me-auto ms-2">Server</strong>
+                <small class="text-danger">Error</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="serverMessage">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="/scripts/list.js"></script>
+</body>
+
+</html>
